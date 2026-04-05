@@ -1,1 +1,165 @@
-     
+    <!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official App Download</title>
+    <!-- আইকনের জন্য ফন্ট অসাম -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* বেসিক স্টাইল */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        
+        /* মেইন কার্ড ডিজাইন */
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .app-logo {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        h2 { margin-bottom: 5px; font-size: 24px; }
+        .version { color: #ddd; font-size: 14px; margin-bottom: 20px; }
+        .badge { background: #ff4757; color: white; padding: 2px 8px; border-radius: 5px; font-size: 10px; vertical-align: top;}
+
+        /* কাউন্টার ডিজাইন */
+        .counter-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+        .count-number { font-weight: bold; color: #00d2d3; font-size: 16px; }
+
+        /* বাটন ডিজাইন */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-download {
+            background: #2ed573;
+            color: #fff;
+            box-shadow: 0 5px 15px rgba(46, 213, 115, 0.4);
+        }
+        .btn-download:hover { background: #26af61; transform: translateY(-2px); }
+
+        .btn-telegram {
+            background: #229ED9;
+            color: white;
+            box-shadow: 0 5px 15px rgba(34, 158, 217, 0.4);
+        }
+        .btn-telegram:hover { background: #1b8ac0; transform: translateY(-2px); }
+
+        /* অ্যানিমেশন */
+        @keyframes pop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .animate { animation: pop 0.3s ease; }
+
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- অ্যাপের লোগো (নিচের src পরিবর্তন করে আপনার লোগো দিন) -->
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732205.png" alt="App Logo" class="app-logo">
+        
+        <h2> Follow 2Earn APK <span class="badge">NEW</span></h2>
+        <p class="version">ভার্সন: 2.5.0 | সাইজ: 15 MB</p>
+
+        <!-- ডাউনলোড কাউন্টার -->
+        <div class="counter-box">
+            <i class="fas fa-users"></i> মোট ডাউনলোড: 
+            <span id="downloadCount" class="count-number">1000</span> জন
+        </div>
+
+        <!-- ডাউনলোড বাটন -->
+        <!-- href এর জায়গায় আপনার অ্যাপের ডাইরেক্ট ডাউনলোড লিংক দিন -->
+        <a href="base.apk" class="btn btn-download" onclick="updateCount()">
+            <i class="fas fa-download"></i> অ্যাপ ডাউনলোড করুন
+        </a>
+
+        <!-- টেলিগ্রাম বাটন -->
+        <!-- href এর জায়গায় আপনার টেলিগ্রাম চ্যানেলের লিংক দিন -->
+        <a href="https://t.me/follow_to_follow_back_fast" target="_blank" class="btn btn-telegram">
+            <i class="fab fa-telegram-plane"></i> টেলিগ্রামে যুক্ত হোন
+        </a>
+    </div>
+
+    <script>
+        // জাভাস্ক্রিপ্ট লজিক
+        
+        // ১. লোড হওয়ার সময় লোকাল স্টোরেজ চেক করা
+        document.addEventListener("DOMContentLoaded", () => {
+            let countElement = document.getElementById("downloadCount");
+            
+            // যদি আগে সেভ করা ভ্যালু থাকে তা নিবে, না থাকলে ১০০০ সেট করবে
+            let currentCount = localStorage.getItem("appDownloads");
+            if (!currentCount) {
+                currentCount = 1000; 
+                localStorage.setItem("appDownloads", currentCount);
+            }
+            
+            countElement.innerText = currentCount;
+        });
+
+        // ২. ডাউনলোড বাটনে ক্লিক করলে সংখ্যা বাড়ানো
+        function updateCount() {
+            let countElement = document.getElementById("downloadCount");
+            let currentCount = parseInt(localStorage.getItem("appDownloads"));
+
+            // সংখ্যা ১ বাড়ানো
+            let newCount = currentCount + 1;
+            
+            // নতুন সংখ্যা দেখানো এবং সেভ করা
+            countElement.innerText = newCount;
+            localStorage.setItem("appDownloads", newCount);
+
+            // ছোট একটি অ্যানিমেশন ইফেক্ট
+            countElement.classList.add("animate");
+            setTimeout(() => countElement.classList.remove("animate"), 300);
+            
+            // এখানে আপনি চাইলে কিছু সময় পর ডাউনলোড শুরু করতে পারেন
+            // alert("ডাউনলোড শুরু হচ্ছে..."); 
+        }
+    </script>
+
+</body>
+</html> 
