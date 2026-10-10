@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Follow 2Earn - App Install</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-container": "#01875f",
+                        "primary": "#006b4b",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#181c20",
+                        "outline-variant": "#bdcac1",
+                        "outline": "#6e7a72",
+                        "surface-container-high": "#e5e8ee",
+                        "on-surface-variant": "#3e4943",
+                        "primary-fixed": "#8ef7c7"
+                    },
+                    spacing: {
+                        "margin-mobile": "24px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "xl": "32px",
+                        "xs": "4px",
+                    },
+                    fontFamily: {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "title-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"],
+                        "label-lg": ["Plus Jakarta Sans"]
+                    },
+                    fontSize: {
+                        "title-lg": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        ::-webkit-scrollbar { display: none; }
+        body { -ms-overflow-style: none; scrollbar-width: none; min-height: max(884px, 100dvh); }
+        .screenshot-container { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 1rem; }
+        .screenshot-item { scroll-snap-align: start; flex-shrink: 0; }
+        .collapsible-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .collapsible-content.active { max-height: 500px; }
+        .rotate-180 { transform: rotate(180deg); }
+    </style>
+</head>
+
+<body class="bg-surface-container-lowest text-on-surface font-body-md antialiased min-h-screen">
+    
+    <!-- Top AppBar -->
+    <header class="bg-white border-b border-gray-100 flex justify-between items-center w-full px-4 h-16 sticky top-0 z-50">
+        <div class="flex items-center gap-4">
+            <button class="hover:bg-gray-100 transition-colors rounded-full p-2 scale-95 duration-150 ease-in-out">
+                <span class="material-symbols-outlined text-emerald-700" data-icon="arrow_back">arrow_back</span>
+            </button>
+        </div>
+        <div class="flex items-center gap-2">
+            <button class="hover:bg-gray-100 transition-colors rounded-full p-2 scale-95 duration-150 ease-in-out">
+                <span class="material-symbols-outlined text-emerald-700" data-icon="search">search</span>
+            </button>
+            <button class="hover:bg-gray-100 transition-colors rounded-full p-1 scale-95 duration-150 ease-in-out">
+                <div class="w-8 h-8 rounded-full overflow-hidden bg-emerald-600 flex items-center justify-center text-white font-bold text-xs shadow-sm">U</div>
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-screen-md mx-auto pb-24 px-margin-mobile">
+        
+        <!-- App Details / Hero Section -->
+        <section class="pt-xl flex gap-md items-start">
+            <div class="w-24 h-24 rounded-[22px] bg-white shadow-md flex items-center justify-center flex-shrink-0 p-1 overflow-hidden border border-outline-variant">
+                <img src="https://i.ibb.co/DP9TwkHh/1e6d71f9-7592-471e-9a8f-6f7d3829ca1e.jpg" class="w-full h-full object-cover rounded-[18px]">
+            </div>
+            <div class="flex flex-col flex-1">
+                <h1 class="font-headline-md text-headline-md text-on-surface">Follow 2Earn</h1>
+                <p class="font-label-lg text-primary">Official Earning App</p>
+                <p class="font-body-sm text-body-sm text-outline mt-xs">Contains ads · Free to use</p>
+            </div>
+        </section>
+        
+        <!-- App Stats Row -->
+        <section class="mt-xl flex justify-between items-center overflow-x-auto pb-2">
+            <div class="flex flex-col items-center min-w-[80px] border-r border-outline-variant px-sm">
+                <div class="flex items-center gap-1">
+                    <span class="font-title-lg text-title-lg">4.8</span>
+                    <span class="material-symbols-outlined text-[14px] fill-current text-on-surface" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <span class="font-body-sm text-body-sm text-outline">7K reviews</span>
+            </div>
+            <div class="flex flex-col items-center min-w-[80px] border-r border-outline-variant px-sm">
+                <span class="font-title-lg text-title-lg">52K+</span>
+                <span class="font-body-sm text-body-sm text-outline">Downloads</span>
+            </div>
+            <div class="flex flex-col items-center min-w-[80px] px-sm">
+                <div class="w-5 h-5 border-[1.5px] border-on-surface flex items-center justify-center rounded-sm">
+                    <span class="text-[10px] font-bold">3+</span>
+                </div>
+                <span class="font-body-sm text-body-sm text-outline mt-1">Rated for 3+</span>
+            </div>
+        </section>
+
+        <!-- Install Button & Wishlist -->
+        <section class="mt-xl">
+            <button id="install-btn" class="w-full bg-primary-container hover:bg-primary transition-colors text-on-primary py-md rounded-full font-label-lg font-bold active:scale-[0.98] active:bg-primary/90 shadow-md hover:shadow-lg transition-all relative overflow-hidden">
+                <span id="btn-text">Install</span>
+                <div id="progress-bar" class="absolute inset-0 bg-white/20 w-0 transition-all duration-300"></div>
+            </button>
+            <div class="flex justify-center mt-md">
+                <button class="flex items-center gap-sm text-primary font-label-lg px-lg py-sm rounded-lg hover:bg-primary-fixed/20 transition-colors active:bg-primary-fixed/30 active:scale-95">
+                    <span class="material-symbols-outlined" data-icon="bookmark_add">bookmark_add</span>
+                    Add to wishlist
+                </button>
+            </div>
+        </section>
+
+        <!-- Screenshots Carousel -->
+        <section class="mt-4 -mx-margin-mobile px-margin-mobile">
+            <div class="screenshot-container">
+                <div class="screenshot-item min-w-[135px] h-[200px] rounded-xl overflow-hidden bg-surface-container-high shadow-sm border border-outline-variant">
+                    <img alt="Screenshot 1" class="w-full h-full object-cover" src="https://i.ibb.co/DP9TwkHh/1e6d71f9-7592-471e-9a8f-6f7d3829ca1e.jpg"/>
+                </div>
+                <div class="screenshot-item min-w-[135px] h-[200px] rounded-xl overflow-hidden bg-surface-container-high shadow-sm border border-outline-variant">
+                    <img alt="Screenshot 2" class="w-full h-full object-cover" src="https://i.ibb.co/DP9TwkHh/1e6d71f9-7592-471e-9a8f-6f7d3829ca1e.jpg"/>
+                </div>
+                <div class="screenshot-item min-w-[135px] h-[200px] rounded-xl overflow-hidden bg-surface-container-high shadow-sm border border-outline-variant">
+                    <img alt="Screenshot 3" class="w-full h-full object-cover" src="https://i.ibb.co/DP9TwkHh/1e6d71f9-7592-471e-9a8f-6f7d3829ca1e.jpg"/>
+                </div>
+            </div>
+        </section>
+
+        <!-- About this app -->
+        <section class="mt-xl mb-4">
+            <div onclick="toggleCollapsible('about-content', 'about-arrow')" class="flex justify-between items-center mb-md hover:bg-surface-container-high/50 -mx-4 px-4 py-2 rounded-lg transition-colors cursor-pointer">
+                <h2 class="font-headline-md text-headline-md">About this app</h2>
+                <span id="about-arrow" class="material-symbols-outlined text-outline transition-transform duration-300" data-icon="arrow_forward">arrow_forward</span>
+            </div>
+            <div class="collapsible-content" id="about-content">
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    Follow 2Earn অ্যাপের মাধ্যমে খুব সহজেই টাস্ক কমপ্লিট করে প্রতিদিন রিওয়ার্ড জিতে নিন। এটি ১০০% ট্রাস্টেড এবং ব্যবহার করা খুবই সহজ। পেমেন্ট সিস্টেম খুব ফাস্ট এবং সিকিউর!
+                </p>
+            </div>
+            <div class="flex flex-wrap gap-sm mt-md">
+                <span class="bg-surface-container-high text-on-surface px-md py-1 rounded-lg font-body-sm">Earning</span>
+                <span class="bg-surface-container-high text-on-surface px-md py-1 rounded-lg font-body-sm">Trusted</span>
+                <span class="bg-surface-container-high text-on-surface px-md py-1 rounded-lg font-body-sm">Editor's Choice</span>
+            </div>
+        </section>
+        
+        <!-- Ratings & Reviews -->
+        <section class="mt-xl pt-xl border-t border-outline-variant">
+            <div class="flex justify-between items-center mb-md">
+                <h2 class="font-headline-md text-headline-md">Ratings and reviews</h2>
+                <span class="material-symbols-outlined text-outline" data-icon="arrow_forward">arrow_forward</span>
+            </div>
+
+            <!-- Top Visible Reviews -->
+            <div class="mt-lg space-y-lg">
+                <!-- Review 1 -->
+                <div class="flex flex-col gap-sm">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-sm">
+                            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-[12px]">MS</div>
+                            <span class="font-label-lg">Mohammad Sajjad</span>
+                        </div>
+                        <span class="material-symbols-outlined text-outline text-[18px]" data-icon="more_vert">more_vert</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="flex text-primary">
+                            <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                    </div>
+                    <p class="font-body-md text-on-surface-variant">আমি এই অ্যাপটি কয়েকদিন ধরে ব্যবহার করছি এবং সত্যি বলতে কি, এর ইউজার ইন্টারফেস অনেক চমৎকার। পেমেন্ট সিস্টেম খুব স্মুথ কাজ করে। ডেভেলপারদের অনেক ধন্যবাদ এমন একটি অ্যাপ উপহার দেওয়ার জন্য!</p>
+                </div>
+                <!-- Review 2 -->
+                <div class="flex flex-col gap-sm">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-sm">
+                            <div class="w-8 h-8 rounded-full bg-pink-600 flex items-center justify-center text-white font-bold text-[12px]">RJ</div>
+                            <span class="font-label-lg">Rafiqul Jaman</span>
+                        </div>
+                        <span class="material-symbols-outlined text-outline text-[18px]" data-icon="more_vert">more_vert</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="flex text-primary">
+                            <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                    </div>
+                    <p class="font-body-md text-on-surface-variant">Best earning app in Bangladesh. I got my payment within 10 minutes via bKash. Highly recommended!</p>
+                </div>
+                <!-- Review 3 -->
+                <div class="flex flex-col gap-sm">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-sm">
+                            <div class="w-8 h-8 rounded-full bg-emerald-600 flex items-center justify-center text-white font-bold text-[12px]">AK</div>
+                            <span class="font-label-lg">Anika Kabir</span>
+                        </div>
+                        <span class="material-symbols-outlined text-outline text-[18px]" data-icon="more_vert">more_vert</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="flex text-primary">
+                            <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[12px] opacity-20" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                    </div>
+                    <p class="font-body-md text-on-surface-variant">অসাধারণ সার্ভিস! খুব দ্রুত পেমেন্ট পেয়েছি। কিন্তু অ্যাড মাঝে মাঝে একটু বেশি আসে।</p>
+                </div>
+
+                <!-- Hidden Reviews Container (Shows when Load More is clicked) -->
+                <div id="hidden-reviews" class="hidden space-y-lg mt-lg">
+                    <div class="flex flex-col gap-sm">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-sm">
+                                <div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-[12px]">JI</div>
+                                <span class="font-label-lg">Jahidul Islam</span>
+                            </div>
+                            <span class="material-symbols-outlined text-outline text-[18px]" data-icon="more_vert">more_vert</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex text-primary">
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-on-surface-variant">অ্যাপটি বেশ ভালো, কাজ করা খুব সহজ। প্রতিদিন ঠিকমতো পেমেন্ট দেয়।</p>
+                    </div>
+
+                    <div class="flex flex-col gap-sm">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-sm">
+                                <div class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold text-[12px]">NS</div>
+                                <span class="font-label-lg">Nasrin Sultana</span>
+                            </div>
+                            <span class="material-symbols-outlined text-outline text-[18px]" data-icon="more_vert">more_vert</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex text-primary">
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-on-surface-variant">100% trusted application. I have withdrawn money 3 times already.</p>
+                    </div>
+
+                    <div class="flex flex-col gap-sm">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-sm">
+                                <div class="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center text-white font-bold text-[12px]">MH</div>
+                                <span class="font-label-lg">Mominul Haque</span>
+                            </div>
+                            <span class="material-symbols-outlined text-outline text-[18px]" data-icon="more_vert">more_vert</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex text-primary">
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px] opacity-20" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-on-surface-variant">কাজ করতে অনেক ভালো লাগে। অ্যাডগুলো ঠিকমতো আসে। আশা করি সামনে আরও ভালো হবে।</p>
+                    </div>
+
+                    <div class="flex flex-col gap-sm">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-sm">
+                                <div class="w-8 h-8 rounded-full bg-teal-500 flex items-center justify-center text-white font-bold text-[12px]">TA</div>
+                                <span class="font-label-lg">Tania Ahmed</span>
+                            </div>
+                            <span class="material-symbols-outlined text-outline text-[18px]" data-icon="more_vert">more_vert</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex text-primary">
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-on-surface-variant">Very nice app. Easy to use and real cash out.</p>
+                    </div>
+
+                    <div class="flex flex-col gap-sm">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-sm">
+                                <div class="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center text-white font-bold text-[12px]">RK</div>
+                                <span class="font-label-lg">Rashedul Karim</span>
+                            </div>
+                            <span class="material-symbols-outlined text-outline text-[18px]" data-icon="more_vert">more_vert</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex text-primary">
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-on-surface-variant">ভাই পেমেন্ট পাইছি। যারা কাজ করতে চান তারা নিঃসন্দেহে কাজ করতে পারেন।</p>
+                    </div>
+
+                    <div class="flex flex-col gap-sm">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-sm">
+                                <div class="w-8 h-8 rounded-full bg-indigo-500 flex items-center justify-center text-white font-bold text-[12px]">FA</div>
+                                <span class="font-label-lg">Fahmida Islam</span>
+                            </div>
+                            <span class="material-symbols-outlined text-outline text-[18px]" data-icon="more_vert">more_vert</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex text-primary">
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-on-surface-variant">Support team is very helpful. They solved my payment issue instantly. Thanks!</p>
+                    </div>
+
+                    <div class="flex flex-col gap-sm">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-sm">
+                                <div class="w-8 h-8 rounded-full bg-pink-400 flex items-center justify-center text-white font-bold text-[12px]">SA</div>
+                                <span class="font-label-lg">Sadia Afrin</span>
+                            </div>
+                            <span class="material-symbols-outlined text-outline text-[18px]" data-icon="more_vert">more_vert</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex text-primary">
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-on-surface-variant">স্টুডেন্টদের জন্য পার্ট টাইম ইনকামের সেরা একটা অ্যাপ।</p>
+                    </div>
+
+                    <div class="flex flex-col gap-sm">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-sm">
+                                <div class="w-8 h-8 rounded-full bg-cyan-600 flex items-center justify-center text-white font-bold text-[12px]">JU</div>
+                                <span class="font-label-lg">Jashim Uddin</span>
+                            </div>
+                            <span class="material-symbols-outlined text-outline text-[18px]" data-icon="more_vert">more_vert</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex text-primary">
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-on-surface-variant">Top notch earning application. Earning system is super fast.</p>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="mt-md flex justify-center">
+                    <button id="load-more-btn" onclick="showAllReviews()" class="text-emerald-700 font-label-lg px-lg py-sm rounded-lg hover:bg-emerald-50 transition-colors flex items-center gap-2">
+                        আরো রিভিউ দেখুন
+                        <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developer Contact -->
+        <section class="mt-xl py-xl border-t border-outline-variant">
+            <div onclick="toggleCollapsible('dev-contact-content', 'contact-arrow')"
+                class="flex justify-between items-center cursor-pointer hover:bg-surface-container-high/50 -mx-4 px-4 py-2 rounded-lg transition-colors cursor-pointer">
+                <h2 class="font-title-lg text-title-lg">Developer contact</h2>
+                <span id="contact-arrow" class="material-symbols-outlined text-outline transition-transform duration-300" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+            </div>
+            <div id="dev-contact-content" class="collapsible-content">
+                <div class="mt-md space-y-lg">
+                    <div class="flex items-center gap-md">
+                        <span class="material-symbols-outlined text-outline" data-icon="mail">mail</span>
+                        <div>
+                            <p class="font-label-lg">Email</p>
+                            <p class="font-body-sm text-outline">support@follow2earn.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-md">
+                        <span class="material-symbols-outlined text-outline" data-icon="privacy_tip">privacy_tip</span>
+                        <p class="font-label-lg">Privacy Policy</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 py-3 bg-white border-t border-gray-100 shadow-sm">
+        <div class="flex flex-col items-center justify-center text-gray-500 px-5 py-1 cursor-pointer">
+            <span class="material-symbols-outlined mb-1">home</span>
+            <span class="font-plus-jakarta-sans text-[11px] font-medium tracking-tight">Home</span>
+        </div>
+        <div class="flex flex-col items-center justify-center bg-emerald-100 text-emerald-900 rounded-2xl px-5 py-1">
+            <span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+            <span class="font-plus-jakarta-sans text-[11px] font-bold tracking-tight">Apps</span>
+        </div>
+        <div class="flex flex-col items-center justify-center text-gray-500 px-5 py-1 cursor-pointer">
+            <span class="material-symbols-outlined mb-1">local_offer</span>
+            <span class="font-plus-jakarta-sans text-[11px] font-medium tracking-tight">Offers</span>
+        </div>
+        <div class="flex flex-col items-center justify-center text-gray-500 px-5 py-1 cursor-pointer">
+            <span class="material-symbols-outlined mb-1">book</span>
+            <span class="font-plus-jakarta-sans text-[11px] font-medium tracking-tight">Books</span>
+        </div>
+    </nav>
+
+    <!-- Action Scripts -->
+    <script>
+        // Install Button Logic
+        const installBtn = document.getElementById('install-btn');
+        const btnText = document.getElementById('btn-text');
+        const progressBar = document.getElementById('progress-bar');
+        let isDownloading = false;
+
+        installBtn.addEventListener('click', () => {
+            if (isDownloading) return;
+            isDownloading = true;
+            btnText.innerText = 'Pending...';
+            installBtn.classList.add('opacity-80');
+
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.floor(Math.random() * 10) + 2;
+                if (progress >= 100) {
+                    progress = 100;
+                    clearInterval(interval);
+                    btnText.innerText = 'Open';
+                    installBtn.classList.remove('bg-primary-container');
+                    installBtn.classList.add('bg-emerald-600');
+                    
+                    // Final Download Link (Your APK File in GitHub)
+                    window.location.href = "Follow 2Earn_2.2.apk";
+                } else {
+                    btnText.innerText = `${progress}%`;
+                }
+                progressBar.style.width = `${progress}%`;
+            }, 300);
+        });
+
+        // About app collapse logic
+        function toggleCollapsible(contentId, arrowId) {
+            const content = document.getElementById(contentId);
+            const arrow = document.getElementById(arrowId);
+            content.classList.toggle('active');
+            if (arrow) arrow.classList.toggle('rotate-180');
+        }
+
+        // Reviews "Load More" logic
+        function showAllReviews() {
+            const hiddenReviews = document.getElementById('hidden-reviews');
+            const btn = document.getElementById('load-more-btn');
+            hiddenReviews.classList.remove('hidden');
+            btn.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
